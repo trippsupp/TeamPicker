@@ -143,6 +143,7 @@
             // flTeam1
             // 
             this.flTeam1.BackColor = System.Drawing.Color.LightGreen;
+            this.flTeam1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.flTeam1.Controls.Add(this.lblTeam1);
             this.flTeam1.Controls.Add(this.lbTeam1);
             this.flTeam1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
@@ -180,7 +181,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
-            this.ClientSize = new System.Drawing.Size(855, 508);
+            this.ClientSize = new System.Drawing.Size(855, 449);
             this.Controls.Add(this.gbButtons);
             this.Controls.Add(this.flTeam2);
             this.Controls.Add(this.flTeam1);

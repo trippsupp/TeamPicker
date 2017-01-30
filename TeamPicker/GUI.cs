@@ -42,8 +42,8 @@ namespace TeamPicker
                     lblWhosTurn.Text = "It is Team 2's turn to choose";
                     flTeam1.BackColor = Color.Transparent;
                     flTeam2.BackColor = Color.LightGreen;
-                    flTeam1.BorderStyle = BorderStyle.None;
-                    flTeam2.BorderStyle = BorderStyle.FixedSingle;           
+                   // flTeam1.BorderStyle = BorderStyle.None;
+                   // flTeam2.BorderStyle = BorderStyle.FixedSingle;           
                 }
 
                 // if it's Team 2's turn
@@ -54,8 +54,8 @@ namespace TeamPicker
                     lblWhosTurn.Text = "It is Team 1's turn to choose";
                     flTeam2.BackColor = Color.Transparent;
                     flTeam1.BackColor = Color.LightGreen;
-                    flTeam1.BorderStyle = BorderStyle.FixedSingle;
-                    flTeam2.BorderStyle = BorderStyle.None;                    
+                    //flTeam1.BorderStyle = BorderStyle.FixedSingle;
+                    //flTeam2.BorderStyle = BorderStyle.None;                    
                 }
 
                 // switch teams
@@ -76,8 +76,8 @@ namespace TeamPicker
                 lblWhosTurn.Text = "The teams have been selected";
                 flTeam1.BackColor = Color.Transparent;
                 flTeam2.BackColor = Color.Transparent;
-                flTeam1.BorderStyle = BorderStyle.None;
-                flTeam2.BorderStyle = BorderStyle.None;
+               // flTeam1.BorderStyle = BorderStyle.None;
+                //flTeam2.BorderStyle = BorderStyle.None;
                 butPick.Enabled = false; // disable pick button
                 lblWhosTurn.BackColor = Color.Salmon;
             }
@@ -106,8 +106,10 @@ namespace TeamPicker
             // select team 1's turn
             currentPick = 1; // team 1 starts 
             lblWhosTurn.Text = "It is Team 1's turn to choose"; // set current turn label
-            flTeam1.BorderStyle = BorderStyle.FixedSingle;
+            //flTeam1.BorderStyle = BorderStyle.FixedSingle;
             flTeam1.BackColor = Color.LightGreen;
+            //flTeam2.BorderStyle = BorderStyle.None;
+            flTeam2.BackColor = Color.Transparent;
             lblWhosTurn.BackColor = Color.Transparent;
         }
 
@@ -128,5 +130,7 @@ namespace TeamPicker
             newGame();
             butPick.Enabled = true;
         }
+
+       
     }
 }
