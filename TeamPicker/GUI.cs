@@ -8,6 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/**
+ * author: Vance Field
+ * version 1-Feb-2017
+ */
+
 namespace TeamPicker
 {
     public partial class Frame : Form
