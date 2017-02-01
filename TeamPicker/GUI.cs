@@ -18,6 +18,8 @@ namespace TeamPicker
     public partial class Frame : Form
     {
         private int currentPick; // team 1 starts 
+        private const int TEAM_1 = 1;
+        private const int TEAM_2 = 2;
 
         public Frame()
         {
@@ -40,7 +42,7 @@ namespace TeamPicker
             if (lbPlayerPool.SelectedIndex != -1)
             { 
                 // if it's Team 1's turn
-                if (currentPick == 1)
+                if (currentPick == TEAM_1)
                 {
                     lbTeam1.Items.Add(lbPlayerPool.SelectedItem); // add player to team
                     lbPlayerPool.Items.Remove(lbPlayerPool.SelectedItem); // remove player from pool                
@@ -52,7 +54,7 @@ namespace TeamPicker
                 }
 
                 // if it's Team 2's turn
-                if (currentPick == 2)
+                if (currentPick == TEAM_2)
                 {
                     lbTeam2.Items.Add(lbPlayerPool.SelectedItem); // add player to team
                     lbPlayerPool.Items.Remove(lbPlayerPool.SelectedItem); // remove player from pool
@@ -64,13 +66,13 @@ namespace TeamPicker
                 }
 
                 // switch teams
-                if (currentPick == 1)
+                if (currentPick == TEAM_1)
                 {
-                    currentPick = 2; // switch
+                    currentPick = TEAM_2; // switch
                 }
                 else
                 {
-                    currentPick = 1; // switch 
+                    currentPick = TEAM_1; // switch 
                 }
             }
 
@@ -109,7 +111,7 @@ namespace TeamPicker
             // here
 
             // select team 1's turn
-            currentPick = 1; // team 1 starts 
+            currentPick = TEAM_1; // team 1 starts 
             lblWhosTurn.Text = "It is Team 1's turn to choose"; // set current turn label
             //flTeam1.BorderStyle = BorderStyle.FixedSingle;
             flTeam1.BackColor = Color.LightGreen;
